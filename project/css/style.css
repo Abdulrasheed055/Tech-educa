@@ -1,0 +1,1134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+/*Global style*/
+h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: rgba(35,35,85);
+}
+span{
+    font-size: 1.3rem;
+ color: #757373;
+}
+h6{
+    font-size: 1.1rem;
+    color: rgb(24, 24,49);
+}
+/*nav*/
+nav{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 8vw; 
+    align-items: center; /* to center our img an dlink in in same heigth and postion*/
+   box-shadow: 2px 2px 10px rgba(0, 0, 0 , 0.15);  /*req to make the header have box shadow*/
+ z-index: 999;  /*prevent our course from entering nav bar*/
+}
+/*we wnt to reduce the img*/
+nav img{
+width: 150px;
+cursor: pointer;
+}
+nav .navigation {  /*it allow our hamber to be norma with the links nav*/
+    display: flex;
+}
+#menu-btn{
+    width: 30px;
+    display: none;  /*not to display in large screen*/
+    height: 30px;
+}
+/**/
+#menu-close{   /*not  to display in large screen our close star*/
+     display: none;
+}
+/*req to make the link normal */
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;  /*reach end*/
+    align-items: center;
+}
+nav .navigation ul li{
+    list-style-type: none; /*remove dot*/
+    margin-left: 30px;
+}
+nav .navigation ul  li a{
+    text-decoration: none;
+    color: rgb(21, 21,100);
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s; /*req for smooth change of color when hover*/
+}
+nav .navigation ul li a.active,  /* we added this to make our page show hight we are here*/
+nav .navigation ul li a:hover{
+    color:#fdc93b;
+
+}
+/*home*/
+#home{ 
+background-image:linear-gradient(rgba(9, 5, 54 , 0.3),rgba(5, 4, 46 , 0.7)), url(../images/back.jpg);
+width: 100%;
+height: 100vh; /*vh is req  n0te the comma  befor the img here */
+ background-size: cover;
+ background-position: center;  /*req for cente img*/
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+padding-top: 50px;
+}
+#home h2{
+    color: #ffff;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+#home p{
+    width: 50%;
+    color: #ffff;
+    font-size:1.3em;
+    line-height: 24px;
+    
+}
+#home .btn{
+    margin-top: 30px;  /*space bet butttom and text*/
+}
+
+
+#home a{
+    text-decoration: none;
+    padding:12px 35px;
+    font-size: 0.9rem;
+    background-color: #ffff;
+    font-weight: 600;
+    border-radius: 5px;
+}    
+
+#home a.blue{
+    color: #fff;
+    background: rgb(22, 21, 100);
+    transition: 0.3s ease; /*smooth hovering*/
+}
+#home a.blue:hover{    /*hover the buttom*/
+    color: rgb(22, 21, 100);
+    background: #fff;
+}
+/*--------yello button*/
+#home a.yellow{
+    color: #fff;
+    background:#fdc93b;
+    transition: 0.3s ease ;
+}
+#home a.yellow:hover{    /*hover the buttom*/
+    color: rgb(22, 21, 100);
+    background: #fff;
+}
+
+
+/*------------------featuer*/
+#features{
+    padding:5vw 8vw 0 8vw;
+  text-align: center;
+}
+#features .fea-box{
+    background: #f9f9ff;
+    text-align: start;
+}
+#features .fea-box i{  /*icon*/
+    font-size: 2.5rem;
+    color: rgb(44, 44, 100);
+}
+
+#features .fea-box h3{
+ font-size: 1.3rem;
+font-weight: 600;
+color: rgb(44, 44, 100);
+padding: 13px 0 7px 0px;
+}
+
+#features .fea-box p{
+font-size: 1.3rem;
+font-weight: 400;
+color: rgb(70, 70, 87);
+
+
+}
+#features .fea-base{  /*we use grid to this this part into row and is also reponsive no need for media*/
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+    grid-gap: 1.4rem;
+    margin-top: 50px;   /*space at top*/
+}
+
+
+/*---------------------course----------------*/
+#courses{
+    padding: 8vw 8vw 8vw 8vw;
+    text-align: center;
+    cursor: pointer;
+  
+}
+
+#courses .courses-box{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px ,1fr));  /*it allow our course to be arrage small and morderate */
+    grid-gap: 1rem;
+    margin-top: 50px;
+
+}
+
+#courses .courses{
+    text-align: start;  /*to allow text star place*/
+    background: #f9f9ff;
+    height: 100%;
+    position: relative;  /*req check the bottom for the chid*/
+}
+#courses .courses img{
+    width: 100%;  /*it allow the img to postion normal*/
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+
+
+}
+#courses .courses .details{
+    padding: 14px 13px 0 14px;
+}
+#courses .courses .details i{   /*our star*/
+    color: #fdc93b;
+    font-size: 1.2rem;
+}
+#courses .courses .cost{
+    background-color: rgb(74, 74, 136);
+ color: #ffff;
+ line-height: 70px;
+ width: 70px;
+ height: 70px;
+ text-align: center;
+ border-radius: 50%; /*it circle our prize*/
+position: absolute;    /*child we add the parent at top*/
+right: 15px;
+bottom: 100px;
+}
+/*---------------------------- registeration---------*/
+#registeration{
+ padding: 6vw 8vw 6vw 8vw;
+ background-image: linear-gradient(rgba(99,112,168,0.5),rgba(99,112,168,0.5)),url(../images/signup.jpg);
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ display: flex;  /*row*/
+ justify-content: space-between;
+ align-items: center;
+}
+#registeration .reminder{
+    color: #fff;
+}
+#registeration .reminder h1{
+    color: #fff;
+}
+#registeration .reminder .time{
+    display: flex;  /**time to be in row*/
+    margin-top: 40px;
+
+}
+#registeration .reminder .time .date{
+    text-align: center;
+    padding: 13px 33px;
+    background: rgba(255, 255,255, 0.25);  /**/
+    backdrop-filter:blur(4px);
+    box-shadow: 0 8px 32px  0 rgba(31, 38, 135, 0.37);
+    border-radius:10px;
+    margin:0 9px 25px 9px;  /*space betwen  box*/
+    border:  1px solid rgba(255, 255,255, 0.18);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+#registeration .form{
+    background: #fff; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px; /*space inside */
+    box-shadow: 2px 8px 32px rgba(31, 38, 135 , 0.37); 
+
+}
+#registeration  .form input{
+    margin: 15px  0;
+     padding: 16px 12px;  /*space inside the form*/
+     border: 1px  solid  rgb(84, 40 , 241);
+}
+#registeration  .form input::placeholder{
+    color: #413c3c;
+    font-size: 1.0rem;
+    font-weight: 500;
+    font-style: italic;     /*our placeholder style*/
+
+}
+#registeration  .form a.yellow{     
+    color: #fff;
+    background:#fdc93b;
+    transition: 0.3s ease ;
+    text-decoration: none;
+    padding:10px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 5px;  
+}#registeration  .form .btn{ /*sapce bet sumitform and input side*/
+ margin-top: 20px;
+}
+
+#registeration  .form a.yellow:hover{    /*hover the buttom*/
+    color: rgb(22, 21, 100);
+    background: #fff;
+}
+/*--------------------------------------experts------------------*/
+#experts{
+    padding: 8vw 8vw 5vw  8vw;
+    text-align: center;
+
+}
+#experts .expert-box{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 1.4rem;
+    margin-top: 50px;   /*space at top*/  
+}
+/*let design our profile*/
+#experts .expert-box .profile{
+  background: #f9f9ff;   
+  padding: 30px 10px;
+}
+ .pro-link{  /*style the container*/
+ margin-top: 10px;
+}
+.pro-link i{   /*style individul*/
+padding: 10px 10px;
+border: 1px solid rgb(21, 21, 100);
+cursor: pointer;
+}
+/*--------------------------hoivering----------------*/
+.pro-link i:hover{
+    background:rgb(21, 21, 100);  /**-color**/
+    color: white;
+    border:1px solid  rgb(21, 21, 100) ;
+  cursor: pointer;
+  transition: 0.3 ease; /*smooth hovering*/
+}
+
+/*-----------------footer==------------------**/
+footer{
+    padding: 8vw;
+    background: #101c32;
+    display: flex;  /*--------default is row */
+    justify-content: space-between;
+    align-items: flex-start;  /*--start frm the */
+    flex-wrap: wrap;
+
+}
+footer .footer-col{
+    padding-bottom: 40px;
+}
+footer  h3{
+    color: rgb(241, 240, 241);
+    font-weight: 600;
+    padding-bottom: 20px;
+    font-style: italic;
+}
+footer li{
+    list-style-type: none;
+    color: #7b838a;
+    padding: 9px 0;
+    cursor: pointer;
+    font-size: 17px;
+    transition:  0.3 ease;
+    
+} 
+footer li a{
+    text-decoration: none;
+    color: #7b838a;
+}
+                      /*-----------hovering footer-----------*/
+footer li a:hover ,                   
+footer li:hover{
+    color: rgb(241, 240, 241); 
+
+}
+footer p{
+    color: #7b838a;
+}
+ footer .subscribe{
+    margin-top: 20px;
+ }
+ footer input{   /*input*/
+    padding: 15px 12px;
+    background: #334f6c;
+    border:  none;
+    outline: none;/*remove default box shape*/
+    color: white;
+ }
+ footer .subscribe a{
+    background-color:#fff;
+    transition: 0.3s ease ;
+    text-decoration: none;
+    padding:13px 16px;  /*style subcribe*/
+    font-size: 1.0rem;
+    font-weight: 600;
+    
+ }
+/*------------------- button*/
+footer .subscribe a.yellow{
+  color:#2c2c2c;
+  transition: 0.3s ease; /*smooth hovering*/
+  background:#fdc93b;
+}
+footer .subscribe a.yellow:hover{    /*--------------hover buttom*/
+    color: rgb(22, 21, 100);
+    background: #fff;
+}
+
+/*------------------copyright*/
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;/*it allow  icon to move RHS  to fill space */
+    flex-wrap: wrap;  /*req*/
+
+}
+ /*------------------copyright*/
+footer .copyright.pro-link{  /*style the container*/
+    margin-top: 0px;
+   }
+   footer .copyright p{
+    color: #ffff;
+    font-size: 17px;
+}
+
+ /*------------------copyright*/
+footer .copyright  .pro-link i{   /*style individul*/
+   background-color: #5f7185;
+   cursor: pointer;
+   color: #ffff;
+   }
+   /*--------------------------hoivering----------------*/
+   /*------------------copyright*/
+footer .copyright .pro-link i:hover{
+    background-color: #fdc93b;
+    color: #2c2c2c;
+   }
+
+
+   /**----------------------------------------About---------------------*/
+    /* we compy from about  home style at top*/
+   #about-home{
+   background-image:linear-gradient(rgba(9, 5, 54 , 0.3),rgba(5, 4, 46 , 0.7)), url(../images/back1.jpg);
+   width: 100%;
+   height: 60vh; /*vh is req  n0te the comma  befor the img here */
+    background-size: cover;
+    background-position: center;  /*req for cente img*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   padding-top: 50px;
+   }
+   #about-home h2{  /*color our text*/
+    color: white;
+    font-size: 2.2rem;
+    font-style: italic;
+   }
+/*=--------------------aabout-container*/
+#about-container{
+    display: flex;
+    align-items: center;
+    padding: 8vw 8vw 2vw 8vw;
+}
+#about-container .about-text{
+    width: 40%;
+    
+}
+#about-container .about-img{
+    width: 60%;
+    padding-right: 60px;
+
+}
+#about-container .about-img img{
+    width: 100%;  
+}
+
+#about-container .about-text h2{
+    color: #29303B;
+    margin-bottom: 15px; /*space at bottom*/
+}
+#about-container .about-text p{
+  color: #686f7A;
+  font-weight: 300;  
+  font-size: 18px; 
+}
+#about-container .about-text .about-fe{
+    display: flex;   /*our small img to in in row*/
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    
+}
+#about-container .about-text .about-fe img{
+    width: 54px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 23px; /*space for img*/
+}
+#about-container .about-text .about-fe .fe-text{
+ width: 90%;     /*text width*/
+} 
+
+#about-container .about-text .about-fe .fe-text h5{
+   font-size: 16px;
+   color: #29303B;
+   font-style: italic;
+
+}
+/*------------------------------------trust by----------*/
+#trust{
+    text-align: center;
+    padding: 8vw ;
+}
+#trust .trust-img{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#trust .trust-img img{
+    width: 90px;  /*it allow it in row*/
+    height: auto;
+
+}
+/**-------------------------------------------blog-page------------------------------*/
+#blog-container{
+    display: flex; /*alow 2 column*/
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8vw;
+}
+#blog-container .blog{
+    width: 60%;
+}
+#blog-container .blog img{
+    width: 100%;   /*it reduce our img*/
+    border-radius: 19px;
+}
+#blog-container .blog .post{
+ padding-bottom: 60px;  /*spacing*/
+}
+
+#blog-container .blog .post h3{
+    color: #29303B;
+    padding: 15px 0 10px 0; /*spacing*/
+
+}
+#blog-container .blog .post p{
+    color: #757373;
+    padding-bottom: 20px;
+
+}  /*our link style */
+#blog-container .blog .post a{
+    text-decoration: none;
+    font-size: 1.0rem;
+    padding: 13px 35px;
+    background-color: rgb(21, 21, 100);
+    color: white;
+    border-radius: 6px;
+    font-weight: 610;
+}
+/*hovering*/
+
+#blog-container .blog .post a:hover{
+    color:#fdc93b;
+    background-color: rgb(21 23 100);
+}
+
+#blog-container .cate{
+    width: 30%;
+}
+#blog-container .cate h2{
+    padding-bottom: 7px;  /*space betw  categorie*/
+}
+#blog-container .cate  a{
+    text-decoration:none;
+    color: #757373;
+    font-weight: 400;
+    line-height: 45px; /*space for line up and down*/
+
+}
+/**------------------------our post page----------------------*/
+#blog-container .blogpost{
+    width: 60%;
+    margin: 0 auto; 
+}
+#blog-container .blogpost p{
+    text-align: justify; /*make the text to be equal in length*/
+    font-weight: 350;
+    padding-bottom: 60px!important;  /*we added space at down ,so we put importance to overright  the prevous style*/
+}
+
+
+/*----------------------course inner-------*/
+#course-inner{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8vw;
+
+}
+#course-inner .overview {
+  width:70% ;   
+}
+/*-------------we call the  class here below*/
+#course-inner .overview  .course-img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;  /*space at bootom*/
+}
+#course-inner .overview  .course-head{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#course-inner .overview .course-head .c-name{
+    width: 70%;  /*width for our text*/
+}
+#course-inner .overview .course-head .c-name h2{
+     color: #29303B;
+     font-style: italic;
+     font-size: 27px;
+}
+#course-inner .overview .course-head .c-name .star{
+    margin: 6px 0; 
+}
+#course-inner .overview .course-head .c-name .star i{
+    color: #fdc93b;
+    font-size: 0.9rem;
+}
+#course-inner .overview .course-head .c-name p{
+    font-size: 18px;
+}
+#course-inner .overview .course-head span{
+    padding: 16px 23px;
+    border-radius: 5px;
+    color: #5838fc;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(88, 56, 252, 0.1); /*note the background color */
+
+}
+#course-inner h3{  /*all our h3*/
+    padding: 35px 0 25px 0;
+    color: #29303B;
+}
+#course-inner p{  /*all our p*/
+    text-align: justify;
+    color: #64626e;
+}
+#course-inner hr{  /*all our hr*/
+    height: 1px;
+    background: rgba(236,226, 229, 0.5);
+    margin-top: 40px;
+}
+
+#course-inner .tutor{
+    display: flex;
+    flex-direction: row; /*------------note this is default--------*/
+
+}
+#course-inner .tutor img{  /*to reduce img more  note-----------------*/
+    width: 130px;
+    height: 120px;
+    border-radius: 27%;
+    margin-right: 20px;
+    padding-bottom: 10px;
+
+}
+#course-inner .tutor h5{
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 700;
+    
+
+ }
+
+
+#course-inner .learn p{
+ font-size: 16px;
+ padding-bottom: 15px; /*space between*/
+}
+
+#course-inner .learn i{ /*icon*/
+ color: #654ce4;
+ margin-right: 20px;
+ font-weight: 700;
+ font-size: 17px;
+}
+#course-inner .enroll{
+    width: 300px;
+    padding: 0 30px 30px ;
+    border-radius: 12px;
+    box-shadow: 0px 20px 40px 0 rgb(11 2 55 /8% ); /*note--------*/
+
+}
+#course-inner .enroll h3{    /*ih3 style*/
+padding-bottom: 10px;
+}
+#course-inner .enroll p{     /*style our p*/
+    font-size: 16px;
+    color: #64626e;
+    margin: 15px 0;
+
+}
+
+
+#course-inner .enroll p i{             
+
+    color: #654ce4;
+    margin-right: 20px;
+    font-size: 17px;
+    height: 16px;
+    line-height: 16px;
+
+    text-align: center; /* center our icon*/
+}
+
+#course-inner .enroll .enroll-btn{ 
+    padding: 25px 0 20px 0;
+    margin: 0 auto; /*we want to see it at center*/
+
+}
+#course-inner .enroll .enroll-btn a{  /*style our link fr enroll*/
+    text-decoration: none;  /*remove line*/
+    font-size: 19px;
+    padding: 13px 45px;
+    border-radius: 5px;
+    font-weight:600;
+    color: #fff;
+    background: rgb(50, 50, 136);
+}
+
+#course-inner .enroll .enroll-btn a:hover{
+color:#fdc93b;
+background: rgb(50, 50, 136);
+
+}
+/*----------------------------------contact---------------------*/
+#contact{
+    padding: 8vw;
+    display: flex; /*our form come to the right side*/
+    justify-content: space-between; /*it space our form at the end */
+    align-items: flex-start;  /*they are in row*/
+
+} #contact .getin{
+    width: 350px;
+}
+#contact .getin h2{
+    color: #2c234d;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 0;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+#contact .getin h3{
+    color: #2c234d;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+#contact .getin p{
+    color: #686875;
+    line-height: 24px;   /*note for our line to increase*/  
+    margin-bottom:33px;
+    padding-bottom: 25px;   /* space */
+    border-bottom: 2px solid #e5e4ed;
+
+} /*style our icon to be  one row*/
+#contact .getin .getin-details div{
+display: flex;
+}
+/*note the get is our class that we addded in the contact.html,now style again*/
+#contact .getin .getin-details div .get{
+   font-size: 16px;
+   color: #5838fc;
+   margin-right: 20px;
+   line-height: 22px;
+
+
+}
+#contact .getin .getin-details div p{
+    font-size: 16px;
+    border-bottom: none;/*remove border buttom*/
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+#contact .getin .getin-details .pro-link i{
+    margin-right: 8px; /*space social link*/
+
+}
+#contact .form{
+    width: 60%;
+    background: #f7f6fa;
+    padding: 45px;
+    border-radius: 10px;
+}
+
+#contact .form h4{
+font-size: 24px;
+font-style: italic;
+margin-bottom: 8px;
+color: #2c234d;
+line-height: 30px; /*space */
+}
+#contact .form p{
+    color: #686875;
+    line-height: 24px;   /*note for our line to increase*/  
+    padding-bottom: 25px;   /* space */
+    
+
+}
+/* here we want to style the input holder,we star with the row*/
+#contact .form .form-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#contact .form .form-row input{
+    width: 48%;
+    font-size: 16px;
+    font-weight: 420;
+    border-radius: 5px;
+    border: none; /*remove the box*/
+    background: #fff;/*color of our background we input*/
+    color: #7e7c87; /*color of what we input*/
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    outline: none  /*note this help us to remove the box  whtn we click on the form to type remove and see*/
+ 
+}
+/*we added form-col and textarea style */
+#contact .form .form-col input,
+#contact .form .form-col textarea{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 420;
+    border-radius: 5px;
+    border: none; /*remove the box*/
+    background: #fff;/*color of our background we input*/
+    color: #7e7c87; /*color of what we input*/
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    outline: none;
+
+}
+#contact .form button{   /*style button*/
+    font-size: .9rem;
+    padding: 13px 25px;
+    background: rgb(21, 21,100);
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-style: italic;
+    text-transform: capitalize;
+}
+#contact .form button:hover{
+    color:#fdc93b;   
+}
+
+/*-----------------------map------------------*/
+#map{
+    width:100%;
+    height: 70vh;
+    margin-bottom: 8vw;
+}
+#map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+   /*------media   for Tab---------------------*/
+   @media (max-width:769px){
+ nav {
+     padding: 15px 20px;
+        
+   }
+   nav img { /*logo*/
+    width: 130px;
+    
+}
+#menu-btn{
+    display:initial;  /*it display in tab  screen  hamvuger*/
+
+}
+#menu-close{   /*close button property*/
+     display:initial;
+     font-size: 1.6rem;
+     color: white;
+     padding: 30px 0 20px 20px;
+}
+nav .navigation ul {
+    position: absolute; /*repos*/
+    top: 0;
+    right: -220px; /*nav bar gone,and put right =-220 becoz our menu disappear **/
+    height: 100vh; /*height */
+    width: 220px; /*width of our box in tablet*/
+    background: rgba(17, 20, 104 , 0.45);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(255, 255, 255 , 0.18);
+      /*color our page menu bar**/
+    display: flex;
+    flex-direction: column;  /*alow our menu to be in column*/
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;  /*smooth sliding*/
+}  
+/* we added a class .active  and put right =0 becoz at 0 our menu bar appear */
+nav .navigation ul.active {
+    right: 0;
+}
+nav .navigation ul li{
+    padding: 20px 0 20px 40px; /*spacing*/
+    margin-left: 0;
+}
+nav .navigation ul li a{
+    color: white; /*our menu a*/
+
+}
+
+#home {
+    padding-top: 0px;
+}
+
+#home p {
+    width: 90%; /*text width increase*/
+}
+#features {
+    padding: 8vw 4vw 0 4vw; /*reduce space at right*/
+    text-align: center;
+}
+#courses {
+    padding: 8vw 4vw 0 4vw;
+
+}
+#registeration {
+    padding: 6vw 8vw 6vw 8vw;
+    margin-top: 8vw;
+     
+}
+#registeration .reminder .time {  /*lesser space */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+#experts {
+    padding: 8vw 8vw 4vw 8vw;
+    text-align: center;
+}
+footer .copyright .pro-link{
+    margin-top: 17px;  /*space our social*/
+    
+}
+
+/*---------------------------------about----------------------------*/
+#about-container {
+    padding: 8vw 4vw 2vw 4vw; /*reduce*/
+}
+#about-container .about-img {
+    padding-right: 30px;
+}
+#trust .trust-img img {
+    width: 54px;
+    height: auto;
+}
+/*----------------------------------blog----------------------*/
+#blog-container {  
+     padding: 8vw 5vw;
+}
+/*-------------------postpage-----------------*/
+#blog-container .blogpost {
+    width: 100%;
+    margin-top: 40px; /*space betw img and nav img*/
+
+}
+#blog-container .blogpost img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+/*----------------------course inner---------------------*/
+#course-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /*strat*/
+    padding: 8vw 4vw;
+}
+#contact .getin {
+    width: 260px;
+}
+#course-inner .overview {
+    width: 100%;
+}
+#course-inner .overview  .course-img {
+    width: 100%;
+    height: 100%;  /*incrase the  width*/
+    object-fit: cover;
+   
+}
+#course-inner .enroll {
+    margin-top: 25px;
+}
+
+/*-----------------------contact---------------------*/
+ 
+#contact {
+    padding: 8vw 4vw; /*we reduce the space*/
+   
+
+}
+   }
+
+
+
+               /*-------------------small phone--------------*/
+@media (max-width:475px){
+    #registeration {
+            text-align: center; /**center our text */    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        #registeration .reminder .time {  /*square bos*/
+            display: flex;
+            flex-wrap: wrap;   
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+            /*---------------------------------about----------------------------*/
+            #about-container {
+                flex-direction: column-reverse; /*note change to column and see*/
+            }
+            #about-container .about-img{
+                width: 100%;
+                padding-right: 0px;
+            
+            }
+            
+             #about-container .about-text {
+             width: 100%;
+             padding: 20px; /*spacing*/
+          }
+          #trust .trust-img {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        flex-wrap: wrap;
+        }
+        #trust .trust-img img{
+            width: 60px;
+            margin: 10px 15px;
+            height: auto;
+        }
+        /*---------------------------------------blog---------------------------------------*/
+        #blog-container {  
+            flex-direction: column; /*column in tablet*/
+       }
+       #blog-container .blog{
+        width: 100%;  /*img full the page in column*/
+       }
+       #blog-container .cate {
+        width: 100%;
+    }
+    
+/*-------------------postpage-----------------*/
+#blog-container .blogpost {                /* calling blogpost to styte*/
+    width: 100%;
+    margin-top: 50px; /*space betw img and nav img*/
+
+}
+#blog-container .blogpost img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+
+}
+#course-inner .overview .course-head .c-name {
+    width: 50%;
+}
+#course-inner .overview .course-head .c-name h2 {
+ 
+    font-style: italic;
+    font-size: 22px; /*reduce the font*/
+}
+#course-inner .overview .course-head span {
+    font-size: 22px;  /*we reduce the span*/
+    
+}
+#course-inner .enroll {
+    width: 100%;  /*inrease the width*/
+}
+
+
+/*-----------------------contact---------------------*/
+
+#contact {
+    padding: 8vw 4vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}      
+#contact .getin {
+    width: 100%; /*increase length*/
+    margin-bottom: 30px;
+}
+#contact .form {
+    width: 100%;
+    background: #f7f6f4;
+    padding: 40px 30px;
+    
+}
+#contact .form .form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+#contact .form .form-row input{      /*it allow our form to be normal in length for small device*/
+    width: 100%;
+}
+
+}

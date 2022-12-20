@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/1608c801c6.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>::Education website</title>
+</head>
+
+<body>
+    <!--navigation-->
+    <nav>
+        <img src="./images/logo.svg" alt="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i> <!-- closing of page -->
+                <li><a href="index.html">Home</a></li>
+                <!--we added active and link in css to show highted page-->
+                <li><a href="about.html">About</a></li>
+
+                <li><a class="active" href="blog.html">Blog</a></li>
+
+                <li><a href="courses.html">courses</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+            <img id="menu-btn" src="./images/menu.png" alt="anhover menu">
+            <!--nhover menu-->
+
+        </div>
+
+    </nav>
+      <section id="blog-container">
+          <div class="blog blogpost">  <!--- we added "blogpost to style this page"-->
+            <div class="post"> 
+                <img src="./images/b2.jpg" alt="image">
+                <h3> Learn web devlopment in the Easiest way</h3>
+                <p> 
+                    Learn at your own pace, whenever and wherever its most convenient for you
+                        Get started right away and learn on your own schedule with flexible online courses. Build your network and share advice in the Professional Certificate Community as you work through the program.
+                        HANDS-ON PROJECTS
+                        Create work samples that showcase your expertise
+                        Apply your new skills with real-world projects that you can share in interviews to demonstrate your job-readiness to potential employers.
+                    <br><br>
+                    on completion, earn a Professional Certificate to share with your network and unlock job search resources, including resume development help, interview preparation, and more. Many Professional Certificates also have hiring partners or a hiring consortium that recognize the Professional Certificate credential.
+                    <br><br>
+                    she was confident that I was the right person for the job. Thanks to the Google IT Support Professional Certificate, my family gets to see me finally achieve my dream of being in IT.
+                    Tristen A.
+                    Google IT Support Professional Certificate Alumnus
+                    This Professional Certificate taught me a lot of valuable skills in my industry, gave me hands on experience, and not only helped me get interviews, but also gave me projects to discuss in those interviews.
+                    Sarah S.
+                    IBM Data Science Professional Certificate Alumna
+                    As a single working mom, I incredibly proud to have been able to complete this program. Its enabled me to take on additional responsibilities, work on exciting and impactful projects, and even get a raise.
+                    Danielle B.
+                </p>
+
+                    <a href="#">Read next</a>
+            </div>
+          </div>
+
+      </section>
+
+
+
+
+    <!------footer------------------->
+    <footer>
+        <div class="footer-col">
+            <h3> Top Products</h3>
+            <li>Manage Reputation</li>
+            <li> power Tools</li>
+            <li>managed websites</li>
+            <li> Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3> Top Products</h3>
+            <li>Manage Reputation</li>
+            <li> power Tools</li>
+            <li>managed websites</li>
+            <li> Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3> Top Products</h3>
+            <li>Manage Reputation</li>
+            <li> power Tools</li>
+            <li>managed websites</li>
+            <li> Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3> Top Products</h3>
+            <li>Manage Reputation</li>
+            <li> power Tools</li>
+            <li>managed websites</li>
+            <li> Marketing Service</li>
+            <!--4th-->
+        </div>
+        <div class="footer-col">
+            <h3>News letter</h3>
+            <p>You can trust us ,we only send promo offers,</p>
+            <div class="subscribe">
+                <input type="text" name="" placeholder="Your Email address">
+                <a href="#" class="yellow"> sumbit</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright (c)2022 All right reserved | This template was made by Abdulrasheed </p>
+            <div class="pro-link">
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- script for closing in Qiuery -->
+    <script>
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+
+        });
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
